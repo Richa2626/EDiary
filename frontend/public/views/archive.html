@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <h3 class="page-header">Archive Home</h3>
+        <div class="well" ng-init="showArchives()">
+            <div ng-if="archives.length == 0" class="text-center">
+                <h4 class="text-info">No events added yet!</h4>
+                <a href="#addArchive" class="btn btn-info btn-sm">Create New</a>                 
+            </div>
+            <table class="table" ng-if="archives.length != 0">
+                <thead>
+                    <th>Title</th>
+                    <th>Details</th>
+                    <th>Created On</th>
+                    <th>Emotions</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="archive in archives">
+                        <td>{{archive.title}}</td>
+                        <td>{{archive.description | limitTo: 50}}{{archive.description.length < 50 ? '' : '...'}}</td>
+                        <td>{{archive.date | date}}</td>
+                        <td>{{archive.emotions}}</td>
+                        <td><a href="#editArchive/{{archive.id}}">Edit</a></td>
+                        <td><a href="#deleteArchive/{{archive.id}}" class="text-danger">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>

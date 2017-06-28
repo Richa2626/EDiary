@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h3 class="page-header">Delete Archive</h3>
+        <div class="well">
+            <h4 class="text-danger">Are you sure you want to delete ?</h4>
+
+            <table class="table" ng-init="deleteArchive()">
+                <tbody>
+                    <tr>
+                        <td>Title</td>
+                        <td>{{archive.title}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>{{archive.date | date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>{{archive.description}}</td>
+                    </tr>
+                    <tr>
+                        <td>Emotions</td>
+                        <td>{{archive.emotions}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <a class="btn btn-primary" href="#archive">Cancel</a >
+            <button class="btn btn-danger" ng-click="confirmDelete()">Delete</button>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>

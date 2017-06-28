@@ -1,0 +1,11 @@
+<h2>Showing the emotions chart for all the events</h2>
+
+<div class="jumbotron" ng-init="createChartOnData()">
+    {{noData}}
+    <!--<p class="text-success">Happy <strong>{{emotions.happy}}</strong></p>
+    <p class="text-warning">Ok <strong>{{emotions.ok}}</strong></p>
+    <p class="text-danger">Sad <strong>{{emotions.sad}}</strong></p>-->
+    <div class="text-info" ng-if="noData">No data to create Chart</div>
+    
+    <div id="chart"></div>
+</div>
